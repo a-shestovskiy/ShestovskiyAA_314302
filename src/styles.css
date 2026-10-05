@@ -1,0 +1,61 @@
+/* Дизайн-токены: типографика, сетка 8 px, радиусы */
+:root {
+  --c-primary: #1F4E9C;
+  --c-primary-dark: #143A75;
+  --c-secondary: #0E9F8E;
+  --c-success: #2E7D32;
+  --c-warning: #E08600;
+  --c-error: #C62828;
+  --c-bg: #F4F6FA;
+  --c-surface: #FFFFFF;
+  --c-text: #1B2433;
+  --c-muted: #667085;
+  --c-border: #D8DEE9;
+  --radius: 8px;
+  --space: 8px;
+  --sidebar-w: 248px;
+  --topbar-h: 64px;
+}
+
+html, body, #app { height: 100%; }
+body, .v-application {
+  font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif !important;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--c-text);
+  background: var(--c-bg) !important;
+}
+
+h1, .t-h1 { font-size: 28px; line-height: 36px; font-weight: 600; margin: 0; }
+h2, .t-h2 { font-size: 22px; line-height: 30px; font-weight: 600; margin: 0; }
+h3, .t-h3 { font-size: 18px; line-height: 26px; font-weight: 600; margin: 0; }
+.t-body { font-size: 14px; line-height: 22px; }
+.t-caption { font-size: 12px; line-height: 18px; color: var(--c-muted); }
+
+.page { padding: 24px 32px 40px; max-width: 1440px; margin: 0 auto; }
+.page-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
+.page-head .t-caption { margin-top: 4px; }
+
+.sidebar { background: var(--c-primary-dark) !important; color: #fff; }
+.sidebar .v-list-item { border-radius: 8px; margin: 2px 12px; color: rgba(255,255,255,.78); }
+.sidebar .v-list-item--active { background: rgba(255,255,255,.14); color: #fff; }
+.sidebar .v-list-subheader { color: rgba(255,255,255,.5); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+
+.card-pad { padding: 24px; }
+.kpi { padding: 20px 24px; }
+.kpi .kpi-v { font-size: 32px; line-height: 40px; font-weight: 600; color: var(--c-primary-dark); }
+.field-label { font-size: 12px; font-weight: 500; color: var(--c-muted); margin-bottom: 4px; }
+
+.v-table thead th { background: #EEF2F8 !important; font-weight: 600 !important; color: var(--c-primary-dark) !important; }
+.v-table tbody tr:hover { background: #F7F9FC; }
+
+.score-ring { width: 168px; height: 168px; }
+.factor-bar { height: 8px; border-radius: 4px; background: #E6EAF2; overflow: hidden; }
+.factor-bar > span { display: block; height: 100%; border-radius: 4px; }
+
+@media (max-width: 960px) {
+  .page { padding: 16px; }
+  .page-head { flex-direction: column; }
+}
+
+.v-btn { letter-spacing: 0 !important; font-weight: 500 !important; font-size: 14px !important; }
